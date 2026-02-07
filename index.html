@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopMaster</title>
+    <link rel="icon" href="https://i.pinimg.com/originals/8b/7d/0c/8b7d0c88227abf5a237870b047677b4b.jpg" type="image/jpg">
+</head>
+<body>
+
+    <header class="admin-header">
+        <h1>Dashboard ShopMaster</h1>
+        
+        <div class="search-container">
+            <input type="text" id="input-search" placeholder="Buscar producto y presiona Enter...">
+        </div>
+    </header>
+
+    <main class="admin-content">
+        <section class="controls">
+            <div class="filter-group">
+                <label for="select-categoria">Categoría:</label>
+                <select id="select-categoria">
+                    <option value="">Todas las categorías</option>
+                    </select>
+            </div>
+
+            <button class="btn-add" onclick="window.location.href='nuevo.html'">+ Nuevo Producto</button>
+        </section>
+
+        <table id="tabla-productos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Título</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+                </tbody>
+        </table>
+
+        <footer class="pagination">
+            <button id="btn-anterior" onclick="anteriorPagina()">Anterior</button>
+            <span id="info-paginacion">Página 1 de ...</span>
+            <button id="btn-siguiente" onclick="siguientePagina()">Siguiente</button>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
